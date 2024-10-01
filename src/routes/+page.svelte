@@ -15,6 +15,10 @@
 	}
 </script>
 
+<svete:head>
+	<title>The Run Game</title>
+</svete:head>
+
 {#if on}
 	<Game {stop} />
 {:else}
