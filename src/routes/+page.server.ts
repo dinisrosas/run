@@ -1,6 +1,11 @@
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ request }) => {
-  console.log(request.headers);
-  return { headers: request.headers.entries() };
+  const headers = {};
+  request.headers.forEach((value, key) => {
+    headers[key] = value;
+  });
+
+  // Return headers as JSON
+  return { headers };
 };
