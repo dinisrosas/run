@@ -5,5 +5,5 @@ export const load: PageServerLoad = async ({ fetch, request }) => {
 
   const response = await fetch("/api/geo");
   const geo = await response.json();
-  return { geo };
+  return { geo, headers: request.headers };
 };
