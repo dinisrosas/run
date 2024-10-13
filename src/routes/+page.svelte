@@ -1,4 +1,6 @@
 <script>
+	export let data;
+
 	import Game from '$lib/game.svelte';
 	let on = false;
 
@@ -18,6 +20,8 @@
 <svete:head>
 	<title>The Run Game</title>
 </svete:head>
+
+<pre>{JSON.stringify(data, null, 2)}</pre>
 
 {#if on}
 	<Game {stop} />
